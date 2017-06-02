@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png"><br/>
+    路由列表：<br/>
+    <router-link to='/'>VueFileUpload</router-link><br/>
+    <router-link to='/hello'>hello</router-link><br/>
+    <div>=========== 以下是内容 ===========</div>
     <router-view></router-view>
   </div>
 </template>
