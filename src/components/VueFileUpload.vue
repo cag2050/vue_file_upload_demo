@@ -49,6 +49,7 @@ export default{
             // 回调函数绑定
             cbEvents: {
                 onCompleteUpload: (file, response, status, header) => {
+                    console.log('file =')
                     console.log(file)
                     console.log('finish upload')
                 }
@@ -76,11 +77,15 @@ export default{
             }
         },
         onAddItem (files) {
+            console.log('files =')
             console.log(files)
             this.files = files
         },
         uploadItem (file) {
             // 单个文件上传
+            console.log('uploadItem file')
+            console.log(file)
+            // this.reqopts.formData.key = file.name
             file.upload()
         },
         uploadAll () {
