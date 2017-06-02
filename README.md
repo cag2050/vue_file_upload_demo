@@ -1,4 +1,7 @@
-# vue_file_upload_demo
+* 使用 vue-file-upload 上传文件到七牛
+1. 七牛表单上传：https://developer.qiniu.com/kodo/manual/1272/form-upload
+1. 七牛其它上传方式（饿了么组件el-upload，官方js-sdk，原生formdata表单），参看：https://github.com/cag2050/qiniu_demo
+1. vue-file-upload 官方地址：https://github.com/marchFantasy/vue-file-upload
 
 > A Vue.js project
 
