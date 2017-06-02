@@ -22,7 +22,7 @@ div
           td(v-text='onStatus(file)')
           td
             button(type='button',@click="uploadItem(file)") 上传
-    button(type='button',@click="uploadAll") 上传所有文件
+    // button(type='button',@click="uploadAll") 上传所有文件
     button(type='button',@click="clearAll") 清空文件列表
 </template>
 <script>
@@ -38,13 +38,13 @@ export default{
             files: [],
             // 文件过滤器，只能上传图片
             filters: [
-                {
-                    name: 'imageFilter',
-                    fn (file) {
-                        var type = '|' + file.type.slice(file.type.lastIndexOf('/') + 1) + '|'
-                        return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1
-                    }
-                }
+                // {
+                    // name: 'imageFilter',
+                    // fn (file) {
+                        // var type = '|' + file.type.slice(file.type.lastIndexOf('/') + 1) + '|'
+                       //  return '|jpg|png|jpeg|bmp|gif|'.indexOf(type) !== -1
+                    // }
+                // }
             ],
             // 回调函数绑定
             cbEvents: {
@@ -85,7 +85,7 @@ export default{
             // 单个文件上传
             console.log('uploadItem file')
             console.log(file)
-            // this.reqopts.formData.key = file.name
+            this.reqopts.formData.key = file.name
             file.upload()
         },
         uploadAll () {
